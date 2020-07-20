@@ -42,7 +42,7 @@ public class FacturaController {
 	
 	@GetMapping
 	public ResponseEntity<List<Factura>> listar(){
-		 List<Factura> lista = service.listar();
+		List<Factura> lista = service.listar();
 		return new ResponseEntity<List<Factura>>(lista, HttpStatus.OK);
 	}
 		
@@ -61,7 +61,6 @@ public class FacturaController {
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(factura.getIdFactura()).toUri();
 		return ResponseEntity.created(location).build();
 	}
-	
 	
 	@PutMapping
 	public ResponseEntity<Factura> modificar(@Valid @RequestBody Factura factura) {

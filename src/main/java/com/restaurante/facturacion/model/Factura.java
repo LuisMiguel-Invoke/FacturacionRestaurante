@@ -25,7 +25,6 @@ public class Factura {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID_FACTURA")
 	private Integer idFactura;
 	
 	@ApiModelProperty(notes = "Cliente de la Factura")
